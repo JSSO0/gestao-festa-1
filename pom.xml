@@ -5,8 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.0.6</version>
-		<relativePath /> <!-- lookup parent from repository -->
+		<version>2.6.0</version>
 	</parent>
 	<groupId>com.algaworks</groupId>
 	<artifactId>gestao-festa-1</artifactId>
