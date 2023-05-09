@@ -22,6 +22,7 @@ modelAndView.addObject("convidados", convidados.findAll());
 modelAndView.addObject(new Convidado());
 return modelAndView;
 }
+
 @PostMapping("/convidados")
 public String salvar(Convidado convidado) {
 this.convidados.save(convidado);
