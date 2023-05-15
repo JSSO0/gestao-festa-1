@@ -4,27 +4,28 @@ import java.io.Serializable;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-import com.algaworks.festa.repository.ConvidadosRepository;
+import com.algaworks.festa.repository.OrdemRepository;
 
 @Entity
-public class Convidado implements Serializable {
+public class OrdemModel implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-    
+
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
+
 	private String nome;
-	
-	private Integer quantidadeAcompanhantes;
-	
+
+	private String matricula;
+
 	public Long getId() {
 		return id;
 	}
-	
+
 	public void setId(Long id) {
 		this.id = id;
 	}
@@ -37,13 +38,11 @@ public class Convidado implements Serializable {
 		this.nome = nome;
 	}
 
-	public Integer getQuantidadeAcompanhantes() {
-		return quantidadeAcompanhantes;
+	public String getMatricula() {
+		return matricula;
 	}
 
-	public void setQuantidadeAcompanhantes(Integer quantidadeAcompanhantes) {
-		this.quantidadeAcompanhantes = quantidadeAcompanhantes;
+	public void setMatricula(String matricula) {
+		this.matricula = matricula;
 	}
 }
-
-
